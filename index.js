@@ -18,6 +18,7 @@ const pool = new Pool({
 
 pool.connect((err,client,release) => {
     if(err){
+        console.log(err);
         return console.error("error")
     }
     client.query('SELECT NOW()', (err,result) => {
